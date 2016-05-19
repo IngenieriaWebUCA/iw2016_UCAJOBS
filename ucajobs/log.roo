@@ -1,0 +1,54 @@
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-12 16:26:09
+project --topLevelPackage es.uca.iw.ucajobs --projectName ucajobs --java 6 --packaging WAR
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-12 16:26:11
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-12 16:26:17
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-12 19:02:31
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-17 10:37:37
+jpa setup --provider HIBERNATE --database MYSQL
+entity jpa --class ~.domain.Empresa --testAutomatically
+entity jpa --class ~.domain.Ciudad --testAutomatically
+entity jpa --class ~.domain.OfertaTrabajo --sequenceName OFE_SEQ --testAutomatically
+entity jpa --class ~.domain.Perfil --testAutomatically
+entity jpa --class ~.domain.Demandante --sequenceName OFE_SEQ --testAutomatically
+field string --fieldName dni --notNull --class ~.domain.Demandante
+field string --fieldName nombre --notNull
+field string --fieldName apellidos --notNull
+field string --fieldName dirección --notNull 
+field string --fieldName sexo --notNull
+field string --fieldName telefono --notNull
+field string --fieldName email
+field date --fieldName fecha_nacimiento --type java.util.Date --notNull
+field string --fieldName cif --notNull --class ~.domain.Empresa
+field string --fieldName nombre --notNull
+field string --fieldName actividad --notNull
+field set --class ~.domain.Empresa --fieldName ciudades --type ~.domain.Ciudad --mappedBy owner --notNull false --cardinality ONE_TO_MANY
+field string --fieldName nombre --notNull --class ~.domain.Ciudad
+entity jpa --class ~.domain.Titulo --testAutomatically
+entity jpa --class ~.domain.Trabajo --testAutomatically
+field string --fieldName id --notNull --class ~.domain.Perfil
+field string --fieldName trayectoria --notNull
+field string --fieldName foto --notNull
+field set --class ~.domain.Perfil --fieldName titulos --type ~.domain.Titulo --mappedBy perfil --notNull false --cardinality ONE_TO_MANY
+field set --class ~.domain.Perfil --fieldName trabajos --type ~.domain.Trabajo --mappedBy perfil --notNull false --cardinality ONE_TO_MANY
+focus  --class ~.domain.Titulo
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-17 11:29:27
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-17 11:31:34
+field string --fieldName nombre --notNull --class ~.domain.Titulo
+focus --class ~.domain.OfertaTrabajo
+field string --fieldName nombre_puesto --notNull
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-17 12:40:29
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-19 15:51:16
+entity jpa --class ~.domain.Inscripcion --testAutomatically
+// [failed] field number --fieldName id --notNull --class --type java.lang.Integer
+field number --fieldName id --notNull --type java.lang.Int
+field number --fieldName id --notNull --type java.lang.int
+field string --fieldName estado_inscripcion --notNull
+field date --fieldName fecha_inscripcion --type java.util.Date --notNull
+field reference --fieldName demandante --type ~.domain.Demandante
+field reference --fieldName oferta --type ~.domain.OfertaTrabajo
+field number --fieldName salario --type java.lang.Double --class ~.domain.OfertaTrabajo
+field string --fieldName tipologia_contrato --notNull
+field string --fieldName duracion --notNull
+field number --fieldName vacantes --type java.lang.Double
+web mvc setup
+web mvc all --package ~.web
