@@ -5,5 +5,5 @@ Miembros:
 
   -Jesús J. Vidal Florindo.
   -Daniel Cabrera López.
-  -Luis Miguel Paez.
   -Carlos Campos Fe.
+  -Luis Miguel Páez Molina.
