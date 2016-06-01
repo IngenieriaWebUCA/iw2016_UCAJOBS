@@ -6,66 +6,9 @@ package es.iw.ucajobs.domain;
 import es.iw.ucajobs.domain.Demandante;
 import es.iw.ucajobs.domain.Inscripcion;
 import es.iw.ucajobs.domain.Users;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect Demandante_Roo_JavaBean {
-    
-    public String Demandante.getDni() {
-        return this.dni;
-    }
-    
-    public void Demandante.setDni(String dni) {
-        this.dni = dni;
-    }
-    
-    public String Demandante.getNombre() {
-        return this.nombre;
-    }
-    
-    public void Demandante.setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
-    public String Demandante.getApellidos() {
-        return this.apellidos;
-    }
-    
-    public void Demandante.setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-    
-    public String Demandante.getDireccion() {
-        return this.direccion;
-    }
-    
-    public void Demandante.setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-    
-    public String Demandante.getTelefono() {
-        return this.telefono;
-    }
-    
-    public void Demandante.setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-    
-    public String Demandante.getEmail() {
-        return this.email;
-    }
-    
-    public void Demandante.setEmail(String email) {
-        this.email = email;
-    }
-    
-    public Date Demandante.getFecha_nacimiento() {
-        return this.fecha_nacimiento;
-    }
-    
-    public void Demandante.setFecha_nacimiento(Date fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
-    }
     
     public Demandante Demandante.getPerfil() {
         return this.perfil;

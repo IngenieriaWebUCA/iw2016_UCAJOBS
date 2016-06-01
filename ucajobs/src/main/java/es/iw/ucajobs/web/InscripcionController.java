@@ -8,4 +8,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RooWebScaffold(path = "inscripcions", formBackingObject = Inscripcion.class)
 public class InscripcionController {
+	
 }

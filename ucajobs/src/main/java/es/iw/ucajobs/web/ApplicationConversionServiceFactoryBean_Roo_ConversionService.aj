@@ -50,7 +50,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Demandante, String> ApplicationConversionServiceFactoryBean.getDemandanteToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<es.iw.ucajobs.domain.Demandante, java.lang.String>() {
             public String convert(Demandante demandante) {
-                return new StringBuilder().append(demandante.getDni()).append(' ').append(demandante.getNombre()).append(' ').append(demandante.getApellidos()).append(' ').append(demandante.getDireccion()).toString();
+                return "(no displayable fields)";
             }
         };
     }

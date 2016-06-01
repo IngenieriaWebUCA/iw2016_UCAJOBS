@@ -86,16 +86,6 @@ privileged aspect OfertaTrabajoController_Roo_Controller {
         return "ofertatrabajoes/update";
     }
     
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
-    public String OfertaTrabajoController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        OfertaTrabajo ofertaTrabajo = OfertaTrabajo.findOfertaTrabajo(id);
-        ofertaTrabajo.remove();
-        uiModel.asMap().clear();
-        uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
-        uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
-        return "redirect:/ofertatrabajoes";
-    }
-    
     void OfertaTrabajoController.populateEditForm(Model uiModel, OfertaTrabajo ofertaTrabajo) {
         uiModel.addAttribute("ofertaTrabajo", ofertaTrabajo);
         uiModel.addAttribute("ciudads", Ciudad.findAllCiudads());

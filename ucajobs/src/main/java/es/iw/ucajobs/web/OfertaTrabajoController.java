@@ -7,7 +7,7 @@ import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 
 @RequestMapping("/ofertatrabajoes")
 @Controller
-@RooWebScaffold(path = "ofertatrabajoes", formBackingObject = OfertaTrabajo.class)
+@RooWebScaffold(path = "ofertatrabajoes", formBackingObject = OfertaTrabajo.class, delete = false)
 @RooWebFinder
 public class OfertaTrabajoController {
 }

@@ -10,8 +10,6 @@ import es.iw.ucajobs.web.DemandanteController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import org.joda.time.format.DateTimeFormat;
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,7 +40,6 @@ privileged aspect DemandanteController_Roo_Controller {
     
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String DemandanteController.show(@PathVariable("id") Long id, Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("demandante", Demandante.findDemandante(id));
         uiModel.addAttribute("itemId", id);
         return "demandantes/show";
@@ -59,17 +56,28 @@ privileged aspect DemandanteController_Roo_Controller {
         } else {
             uiModel.addAttribute("demandantes", Demandante.findAllDemandantes(sortFieldName, sortOrder));
         }
-        addDateTimeFormatPatterns(uiModel);
         return "demandantes/list";
     }
     
-    void DemandanteController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("demandante_fecha_nacimiento_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+    @RequestMapping(method = RequestMethod.PUT, produces = "text/html")
+    public String DemandanteController.update(@Valid Demandante demandante, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+        if (bindingResult.hasErrors()) {
+            populateEditForm(uiModel, demandante);
+            return "demandantes/update";
+        }
+        uiModel.asMap().clear();
+        demandante.merge();
+        return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
+    }
+    
+    @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
+    public String DemandanteController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+        populateEditForm(uiModel, Demandante.findDemandante(id));
+        return "demandantes/update";
     }
     
     void DemandanteController.populateEditForm(Model uiModel, Demandante demandante) {
         uiModel.addAttribute("demandante", demandante);
-        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
         uiModel.addAttribute("inscripcions", Inscripcion.findAllInscripcions());
         uiModel.addAttribute("userses", Users.findAllUserses());

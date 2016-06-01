@@ -4,12 +4,14 @@ import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+
 import es.iw.ucajobs.reference.TipoContrato;
 import javax.persistence.Enumerated;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.OneToMany;
+
 
 @RooJavaBean
 @RooToString
@@ -50,4 +52,5 @@ public class OfertaTrabajo {
      */
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "oferta")
     private Set<Inscripcion> inscritos = new HashSet<Inscripcion>();
+   
 }

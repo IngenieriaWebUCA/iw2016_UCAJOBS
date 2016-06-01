@@ -22,45 +22,6 @@ public class Demandante {
 
     /**
      */
-    @NotNull
-    @Size(min = 9, max = 9)
-    private String dni;
-
-    /**
-     */
-    @NotNull
-    private String nombre;
-
-    /**
-     */
-    @NotNull
-    private String apellidos;
-
-    /**
-     */
-    @NotNull
-    private String direccion;
-
-    /**
-     */
-    @NotNull
-    @Size(min = 9, max = 9)
-    private String telefono;
-
-    /**
-     */
-    @NotNull
-    private String email;
-
-    /**
-     */
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date fecha_nacimiento;
-
-    /**
-     */
     @ManyToOne
     private Demandante perfil;
 
