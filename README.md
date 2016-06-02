@@ -4,4 +4,4 @@ Consiste en un portal de publicación, búsqueda y suscripción de ofertas de em
 
 Toda la documentación pertinente al proyecto web se encuentra en la carpeta:
 
-https://drive.google.com/drive/folders/0B1Fwyg8GYNTGemIwemh4QzJzbkk
+https://drive.google.com/drive/folders/0B55Z9Y4WmEHvOHUtNUhRemhxTmc
