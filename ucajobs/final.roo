@@ -1,0 +1,159 @@
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 22:57:40
+project --topLevelPackage es.iw.ucajobs --projectName ucajobs --java 6 --packaging WAR
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-31 22:57:41
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 22:57:48
+ jpa setup --provider HIBERNATE --database MYSQL --userName root --databaseName ucajobs
+ entity jpa --class ~.domain.Users --testAutomatically
+ entity jpa --class ~.domain.Roles --testAutomatically
+ entity jpa --class ~.domain.OfertaTrabajo --sequenceName OFE_SEQ --testAutomatically
+ entity jpa --class ~.domain.Ciudad --testAutomatically
+ entity jpa --class ~.domain.Perfil --testAutomatically
+ entity jpa --class ~.domain.Trabajo --testAutomatically
+ entity jpa --class ~.domain.Titulo --testAutomatically
+ entity jpa --class ~.domain.Inscripcion --testAutomatically
+ entity jpa --class ~.domain.Demandante --sequenceName DE_SEQ --testAutomatically
+ entity jpa --class ~.domain.Empresa --sequenceName EM_SEQ --testAutomatically
+ entity jpa --class ~.domain.Experiencia --testAutomatically
+ enum type --class ~.reference.TipoContrato
+ enum constant --name Indefinido
+ enum constant --name Formacion
+ enum constant --name Practica
+ enum constant --name Temporal
+ focus --class  ~.domain.Demandante
+ field string --fieldName dni --notNull --class ~.domain.Demandante --sizeMax 9 --sizeMin 9
+ field string --fieldName nombre --notNull
+ field string --fieldName apellidos --notNull
+ field string --fieldName direccion --notNull
+ field string --fieldName telefono --notNull --sizeMax 9 --sizeMin 9
+ field string --fieldName email --notNull
+ field date --fieldName fecha_nacimiento --type java.util.Date --notNull
+ field reference --fieldName perfil --type ~.domain.Demandante
+ field reference --fieldName usuario --type ~.domain.Users --cardinality ONE_TO_ONE
+ field set --fieldName inscripciones --type ~.domain.Inscripcion --cardinality ONE_TO_MANY --mappedBy demandante
+ focus --class  ~.domain.Empresa
+ field string --fieldName cif --notNull --sizeMax 9 --sizeMin 9
+ field string --fieldName nombre --notNull --sizeMin 2
+ field string --fieldName actividad --notNull
+ field string --fieldName email --notNull
+ field string --fieldName empleados --notNull
+ field set --fieldName ciudades --type ~.domain.Ciudad --cardinality MANY_TO_MANY
+ field reference --fieldName usuario --type ~.domain.Users --cardinality ONE_TO_ONE
+ field set --fieldName ofertas --type ~.domain.OfertaTrabajo --cardinality ONE_TO_MANY
+ focus --class  ~.domain.Ciudad
+ field string --fieldName nombre --notNull
+ focus --class  ~.domain.Perfil
+ field set --fieldName titulos --type ~.domain.Titulo --cardinality MANY_TO_MANY
+ field set --fieldName trabajos --type ~.domain.Trabajo --cardinality MANY_TO_MANY
+ field set --fieldName experiencia --type ~.domain.Experiencia --cardinality MANY_TO_MANY
+ focus --class  ~.domain.Titulo
+ field string --fieldName nombre --notNull
+ focus --class  ~.domain.Trabajo
+ field string --fieldName nombre --notNull
+ focus --class  ~.domain.OfertaTrabajo
+ field reference --fieldName nombre_puesto --type ~.domain.Trabajo --cardinality MANY_TO_ONE --notNull
+ field number --fieldName salario --type double
+ field enum --fieldName tipologia_contrato --type ~reference.TipoContrato --notNull
+ field string --fieldName duracion
+ field number --fieldName vacantes --type int --notNull
+ field reference --fieldName localizacion --type ~.domain.Ciudad --cardinality MANY_TO_ONE
+ field set --fieldName inscritos --type ~.domain.Inscripcion --cardinality ONE_TO_MANY --mappedBy oferta
+ focus --class  ~.domain.Inscripcion
+ field reference --fieldName demandante --type ~.domain.Demandante --cardinality MANY_TO_ONE
+ field reference --fieldName oferta --type ~.domain.OfertaTrabajo --cardinality MANY_TO_ONE
+ field bool --fieldName estado_inscripcion --notNull
+ field date --fieldName fecha_inscripcion --type java.util.Date
+ focus --class ~.domain.Roles
+ field string --fieldName nombre --notNull
+ focus --class ~.domain.Users
+ field string --fieldName login --notNull
+ field string --fieldName clave --notNull
+ field reference --fieldName rol --type ~.domain.Roles --notNull
+ focus --class ~.domain.Experiencia
+ field string --fieldName experiencia --notNull
+ focus --class ~.domain.OfertaTrabajo
+ finder add --finderName findOfertaTrabajoesByInscritos
+ finder add --finderName findOfertaTrabajoesByNombre_puesto
+ finder add --finderName findOfertaTrabajoesBySalario
+ finder add --finderName findOfertaTrabajoesByLocalizacion
+ focus --class ~.domain.Empresa
+ finder add --finderName findEmpresasByNombreLike
+ finder add --finderName findEmpresasByActividadLike
+ focus --class ~.domain.Perfil
+ finder add --finderName findPerfilsByTitulos
+ finder add --finderName findPerfilsByTrabajos
+ finder add --finderName findPerfilsByExperiencia
+ web mvc setup
+ web mvc language --code es
+ web mvc language --code de
+ web mvc jquery setup
+ web mvc jquery all
+ web mvc bootstrap setup
+// script instalacion.roo
+// [failed] web mvc all --package ~.web
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-05-31 23:12:18
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-05-31 23:12:38
+web mvc all --package ~.web
+web mvc finder all
+security setup
+web mvc all --package ~.web
+web mvc finder all
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-01 01:16:20
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-01 18:21:39
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-01 21:05:51
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-02 01:19:33
+enum type --class ~.reference.EstadoOferta
+enum constant --name Espera
+enum constant --name Activada
+enum constant --name Detenida
+enum constant --name Cancelada
+enum constant --name Tramite
+enum constant --name Resuelta
+focus --class  ~.domain.OfertaTrabajo
+field enum --fieldName estado --type ~reference.EstadoOferta --notNull
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-02 10:43:32
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log closed at 2016-06-02 10:43:57
+// Spring Roo 1.3.2.RELEASE [rev d18aef8] log opened at 2016-06-02 10:45:02
+enum type --class ~.reference.Sexo
+enum constant --name Hombre
+enum constant --name Mujer
+focus --class ~.domain.Users
+field enum --fieldName sexo --type ~.reference.Sexo --notNull
+enum type --class ~.reference.estadoInscripcion
+enum constant --name Recibida
+enum constant --name Retirada
+enum constant --name En_Estudio
+enum constant --name Descartada
+enum constant --name Aceptada
+focus --class ~.domain.Inscripcion
+field enum --fieldName estado --type ~.reference.estadoInscripcion
+focus --class ~.domain.OfertaTrabajo
+field string --fieldName descripcion
+test mock --entity ~.domain.Ciudad
+test mock --entity ~.domain.Demandante
+test mock --entity ~.domain.Empresa
+test mock --entity ~.domain.Experiencia
+test mock --entity ~.domain.Inscripcion
+// [failed] test mock --entity es.iw.ucajobs
+test mock --entity ~.domain.OfertaTrabajo
+test mock --entity ~.domain.Perfil
+test mock --entity ~.domain.Roles
+test mock --entity ~.domain.Titulo
+test mock --entity ~.domain.Trabajo
+test mock --entity ~.domain.Users
+test mock --entity ~.reference.EstadoOferta
+test mock --entity ~.reference.EstadoInscripcion
+test mock --entity ~.reference.Sexo
+test mock --entity ~.reference.TipoContrato
+test mock --entity ~.web.CiudadController
+test mock --entity ~.web.DemandanteController
+test mock --entity ~.web.EmpresaController
+test mock --entity ~.web.ExperienciaController
+test mock --entity ~.web.InscripcionController
+test mock --entity ~.web.OfertaTrabajoController
+test mock --entity ~.web.PerfilController
+test mock --entity ~.web.RolesController
+test mock --entity ~.web.TituloController
+test mock --entity ~.web.TrabajoController
+test mock --entity ~.web.UsersController
+selenium all 
+// [failed] test integration 

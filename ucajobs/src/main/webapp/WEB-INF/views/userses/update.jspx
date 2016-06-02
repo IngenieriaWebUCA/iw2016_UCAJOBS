@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:sec="http://www.springframework.org/security/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_iw_ucajobs_domain_Users" modelAttribute="users" path="/userses" versionField="Version" z="saz4Q440z8w74gkbOuDQvVC2W6o=">
+        <field:select field="rol" id="c_es_iw_ucajobs_domain_Users_rol" itemValue="id" items="${roleses}" path="/roleses" required="true" z="zTQnXOU9w6WjeKgmxX3KSHqmj+M="/>
+        <field:checkbox field="activado" id="c_es_iw_ucajobs_domain_Users_activado" z="/bRzaWcSTuVLP5jgtu95me93swI="/>
+        <field:input field="dni" id="c_es_iw_ucajobs_domain_Users_dni" min="8" required="true" z="D/Tb/u+Th21dJt83G0EH5X2sIhw="/>
+        <field:input field="nombre" id="c_es_iw_ucajobs_domain_Users_nombre" required="true" z="hphdQR+4SkE3EbF1lpj4Ao5dGQw="/>
+        <field:input field="apellidos" id="c_es_iw_ucajobs_domain_Users_apellidos" required="true" z="fXaYXYg1AWKT1svgVJvBdg16Z88="/>
+        <field:input field="email" id="c_es_iw_ucajobs_domain_Users_email" required="true" validationMessageCode="field_invalid_email" z="UFWERYoWLREeSAdKrDlCnk8h6eg="/>
+        <field:input field="usuario" id="c_es_iw_ucajobs_domain_Users_usuario" min="4" required="true" z="kKqckeC4CRz9vGYfpOPjS/iRYMA="/>
+        <field:input field="password" id="c_es_iw_ucajobs_domain_Users_password" min="6" required="true" z="NnrCfALW1tx70vo9Bl9Xh2epOrc="/>
+        <field:datetime dateTimePattern="${users_fecharegistro_date_format}" field="fechaRegistro" id="c_es_iw_ucajobs_domain_Users_fechaRegistro" required="true" z="bRjvdE00sbAPADP9MkFcgDIv82s="/>
+        <field:select field="sexo" id="c_es_iw_ucajobs_domain_Users_sexo" items="${sexoes}" path="sexoes" required="true" z="rmy2Ac1xgEqjnuITADsIBu0H0Aw="/>
+    </form:update>
+</div>
