@@ -1,0 +1,49 @@
+<aspectj>
+<aspects>
+<aspect name="es.iw.ucajobs.domain.TituloDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.TituloDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.InscripcionDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.TrabajoIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.DemandanteIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.InscripcionDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.PerfilDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.ExperienciaIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.EmpresaDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.OfertaTrabajoDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.TrabajoDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.EmpresaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.TituloIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.InscripcionIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.TrabajoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.UsersDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.UsersIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.DemandanteDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.PerfilDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.UsersDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.TituloIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.PerfilIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.CiudadIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.RolesIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.RolesDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.TrabajoIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.CiudadIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.CiudadDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.EmpresaDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.DemandanteDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.CiudadDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.PerfilIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.UsersIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.ExperienciaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.EmpresaIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.DemandanteIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.ExperienciaDataOnDemand_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.RolesIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.OfertaTrabajoIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="es.iw.ucajobs.domain.InscripcionIntegrationTest_Roo_Configurable"/>
+<aspect name="es.iw.ucajobs.domain.OfertaTrabajoDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.RolesDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.ExperienciaDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="es.iw.ucajobs.domain.OfertaTrabajoIntegrationTest_Roo_Configurable"/>
+</aspects>
+</aspectj>
+
