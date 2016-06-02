@@ -10,7 +10,7 @@ Las instrucciones de despliegue y montaje del proyecto se encuentran en el Docum
 
 Clonación y despliegue:
 Para realizar la descarga de la aplicación con git se deberá abrir la terminal de Linux/Window, e introducir el siguiente comando:
-  usuario@usuario:~$  git clone URL_MIA.git
+  usuario@usuario:~$  git clone https://github.com/IngenieriaWebUCA/iw2016_UCAJOBS.git
 
 Una vez clonada y se dispone de ella en un repositorio local, hay que dirigirse al directorio raíz del proyecto e introducir en la terminal el siguiente comando para ejecutar el script que nos genera la base de datos y nos realizará el despliegue con maven:
   usuario@usuario:~$  bash install.sh
