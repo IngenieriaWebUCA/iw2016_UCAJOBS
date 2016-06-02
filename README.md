@@ -6,4 +6,6 @@ Toda la documentación pertinente al proyecto web se encuentra en la carpeta:
 
 https://drive.google.com/drive/folders/0B55Z9Y4WmEHvOHUtNUhRemhxTmc
 
-Las instrucciones de despliegue y montaje del proyecto se encuentran en el Documento de Implantación
+Las instrucciones de despliegue y montaje del proyecto se encuentran en el Documento de Implantación.
+
+
