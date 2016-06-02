@@ -9,14 +9,17 @@ https://drive.google.com/drive/folders/0B55Z9Y4WmEHvOHUtNUhRemhxTmc
 Las instrucciones de despliegue y montaje del proyecto se encuentran en el Documento de Implantación.
 Requisitos previos
 
+<h1>Requisitos Previos</h1>
 
-Para hacer el desplegado de la aplicación se deben tener instalados las siguientes aplicaciones en nuestro equipo:
-Plataforma Java: JDK 7.0.790
-Servidor Web: Apache Tomcat 7.0.69
-Gestión y construcción de proyectos: Maven 3.3.9
-Entorno de desarrollo: Spring Tool Suite 3.7.3.RELEASE
-Gestor de base de datos: MySQL 5.5
-Control de versiones: Git
+<p>Para hacer el desplegado de la aplicación se deben tener instalados las siguientes aplicaciones en nuestro equipo:</p>
+<ul>
+<li>Plataforma Java: JDK 7.0.790</li>
+<li>Servidor Web: Apache Tomcat 7.0.69</li>
+<li>Gestión y construcción de proyectos: Maven 3.3.9</li>
+<li>Entorno de desarrollo: Spring Tool Suite 3.7.3.RELEASE</li>
+<li>Gestor de base de datos: MySQL 5.5</li>
+<li>Control de versiones: Git</li>
+</ul>
 
 Clonación y despliegue:
 Para realizar la descarga de la aplicación con git se deberá abrir la terminal de Linux/Windows, e introducir el siguiente comando:
