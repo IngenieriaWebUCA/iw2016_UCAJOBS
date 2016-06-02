@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show delete="false" id="ps_es_iw_ucajobs_domain_OfertaTrabajo" object="${ofertatrabajo}" path="/ofertatrabajoes" z="gw5lo7Orfz5uqv6AiwNBIS75280=">
+        <field:display field="nombre_puesto" id="s_es_iw_ucajobs_domain_OfertaTrabajo_nombre_puesto" object="${ofertatrabajo}" z="0Kx/C1dzHrRYzrXEgrPahPU8tr4="/>
+        <field:display field="salario" id="s_es_iw_ucajobs_domain_OfertaTrabajo_salario" object="${ofertatrabajo}" z="kXuFDILW9zyqFW6nkMzQKLMdiVE="/>
+        <field:display field="tipologia_contrato" id="s_es_iw_ucajobs_domain_OfertaTrabajo_tipologia_contrato" object="${ofertatrabajo}" z="wCeb2OHSNzUT3DscxSTFCuRjwXc="/>
+        <field:display field="duracion" id="s_es_iw_ucajobs_domain_OfertaTrabajo_duracion" object="${ofertatrabajo}" z="lZnzGmTad8y9/yMeyBCXWkw7xlo="/>
+        <field:display field="vacantes" id="s_es_iw_ucajobs_domain_OfertaTrabajo_vacantes" object="${ofertatrabajo}" z="p5RjOVKV9gPUowz8woUaeablcIw="/>
+        <field:display field="localizacion" id="s_es_iw_ucajobs_domain_OfertaTrabajo_localizacion" object="${ofertatrabajo}" z="mQGuvZq73reSLCbmNc1KQsLmy6M="/>
+        <field:display field="estado" id="s_es_iw_ucajobs_domain_OfertaTrabajo_estado" object="${ofertatrabajo}" z="NO7L+G7WqtJTsqYp7CIK/Yjzbrk="/>
+        <field:display field="descripcion" id="s_es_iw_ucajobs_domain_OfertaTrabajo_descripcion" object="${ofertatrabajo}" z="UA/N+p7YT9+cA0leudx43c57Ezo="/>
+    </page:show>
+</div>
