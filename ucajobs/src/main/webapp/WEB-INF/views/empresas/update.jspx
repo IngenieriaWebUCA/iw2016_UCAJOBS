@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_iw_ucajobs_domain_Empresa" modelAttribute="empresa" path="/empresas" versionField="Version" z="FjLvtoL1mXCfXgCMACrDtOg6zpE=">
+        <field:input field="cif" id="c_es_iw_ucajobs_domain_Empresa_cif" max="9" min="9" required="true" z="bYoHTKGNLJM0GY9Ezm6Hv/vtSxQ="/>
+        <field:input field="nombre" id="c_es_iw_ucajobs_domain_Empresa_nombre" min="2" required="true" z="QlhQzNFAqoHctzhUY1AA0YJiLrw="/>
+        <field:input field="actividad" id="c_es_iw_ucajobs_domain_Empresa_actividad" required="true" z="tNdfFp130c0zFYZyyR926WSNk0o="/>
+        <field:input field="email" id="c_es_iw_ucajobs_domain_Empresa_email" required="true" validationMessageCode="field_invalid_email" z="Zk9mQCklBM0a/RZ9bLKHvk8dyWc="/>
+        <field:input field="empleados" id="c_es_iw_ucajobs_domain_Empresa_empleados" required="true" z="3bpx/6JW1lUWtz14Eh5o8VEtEkg="/>
+        <field:select field="ciudades" id="c_es_iw_ucajobs_domain_Empresa_ciudades" itemValue="id" items="${ciudads}" multiple="true" path="/ciudads" z="H5zQVNtkgbXZcxCWv41Y/rD83xE="/>
+        <field:select field="usuario" id="c_es_iw_ucajobs_domain_Empresa_usuario" itemValue="id" items="${userses}" path="/userses" z="VxtGPMls07BKKkS+v7Hp4joJpkw="/>
+        <field:simple field="ofertas" id="c_es_iw_ucajobs_domain_Empresa_ofertas" messageCode="entity_reference_not_managed" messageCodeAttribute="Oferta Trabajo" z="v7R433euBix6+yaBGh6wmTP6OV0="/>
+    </form:update>
+</div>
