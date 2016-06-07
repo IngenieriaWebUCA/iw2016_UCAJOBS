@@ -1,3 +1,7 @@
+CREATE DATABASE  IF NOT EXISTS `ucajobs`/*!40100 DEFAULT CHARACTER SET latin1 */;
+GRANT ALL PRIVILEGES ON `ucajobs`. * TO `ucajobs`@`localhost`;
+
+USE `ucajobs`;
 -- phpMyAdmin SQL Dump
 -- version 4.5.2
 -- http://www.phpmyadmin.net
