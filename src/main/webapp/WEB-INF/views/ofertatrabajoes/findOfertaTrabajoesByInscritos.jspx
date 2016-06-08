@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <form:find finderName="ByInscritos" id="ff_es_iw_ucajobs_domain_OfertaTrabajo" path="/ofertatrabajoes" z="6BIWeB4OYVxOi90/515VstgYldc=">
-        <field:select disableFormBinding="true" field="inscritos" id="f_es_iw_ucajobs_domain_OfertaTrabajo_inscritos" itemValue="id" items="${inscripcions}" path="/inscripcions" required="true" z="1R1aVtjhMwrCWOAZUgNB32MLDck="/>
-    </form:find>
-</div>

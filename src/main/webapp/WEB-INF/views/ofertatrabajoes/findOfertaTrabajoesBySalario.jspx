@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <form:find finderName="BySalario" id="ff_es_iw_ucajobs_domain_OfertaTrabajo" path="/ofertatrabajoes" z="Tclm7soYStFnHqTgpWljvvXezQA=">
-        <field:input disableFormBinding="true" field="salario" id="f_es_iw_ucajobs_domain_OfertaTrabajo_salario" required="true" z="1FHLZY336w+rRP1DAv5a0Et7hgg="/>
-    </form:find>
-</div>
