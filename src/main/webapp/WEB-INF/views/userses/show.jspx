@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show create="false" id="ps_es_iw_ucajobs_domain_Users" object="${users}" path="/userses" z="user-managed">
+        <field:display field="rol" id="s_es_iw_ucajobs_domain_Users_rol" object="${users}" z="hrO2YwXFBDLZwj1sb1ycLFDQBsw="/>
+        <field:display field="activado" id="s_es_iw_ucajobs_domain_Users_activado" object="${users}" z="7oynpoaF2/R613y+M41uV+oz2RQ="/>
+        <field:display field="dni" id="s_es_iw_ucajobs_domain_Users_dni" object="${users}" z="eGrfxYoNhJjGWuWvFzvVat9Oh5Q="/>
+        <field:display field="nombre" id="s_es_iw_ucajobs_domain_Users_nombre" object="${users}" z="kHIGPuTr0saHM5o9rkk5nzX28a8="/>
+        <field:display field="apellidos" id="s_es_iw_ucajobs_domain_Users_apellidos" object="${users}" z="j552IO/QYve15Q1uTavx+Mzei8E="/>
+        <field:display field="email" id="s_es_iw_ucajobs_domain_Users_email" object="${users}" z="u19H+Apo5P8d7N01FyHWMJxCUKk="/>
+        <field:display field="usuario" id="s_es_iw_ucajobs_domain_Users_usuario" object="${users}" z="0eXSazRz4BcSeXgp+qHTf8lzSPU="/>
+        <field:display field="password" id="s_es_iw_ucajobs_domain_Users_password" object="${users}" z="vRolcNwHkghTXDy9xGV38YYx4jU="/>
+        <field:display date="true" dateTimePattern="${users_fecharegistro_date_format}" field="fechaRegistro" id="s_es_iw_ucajobs_domain_Users_fechaRegistro" object="${users}" z="WmKBn19RhZ3K6RdyW2SBRmOGV9E="/>
+        <field:display field="sexo" id="s_es_iw_ucajobs_domain_Users_sexo" object="${users}" z="EkhO4b1WrWv5RimIbuWXlr82uPY="/>
+    </page:show>
+</div>
