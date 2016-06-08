@@ -1,4 +1,14 @@
+<h1><b>Ucajobs</b></h1>
+<h2>Componentes:</h2>
+<ul>
+       <li>Carlos Campos Fe</li>
+       <li>Jesús Javier Vidal Florindo</li>
+       <li>Daniel Cabrera López</li>
+       <li>Luis Miguel Páez Molina</li>
+</ul>
 
+<p>Proyecto Basado en Spring Roo</p>
+<p> Desarrollo de un portal web que hará las funciones de bolsa de empleo, permitiendo toda la gestión de éste</p>
 <h1>Instrucciones de instalación</h1>
 Se incluyen las instrucciones de instalación y despliegue de nuestra aplicación, junto con los software necesarios para ello.
 
