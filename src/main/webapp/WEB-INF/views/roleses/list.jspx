@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_iw_ucajobs_domain_Roles" items="${roleses}" z="P6bOCtJTgfDf5OhnmujWhBgGG+g=">
+        <table:table data="${roleses}" id="l_es_iw_ucajobs_domain_Roles" path="/roleses" z="TR/RgsprmV3+87OAgSE880JgITo=">
+            <table:column id="c_es_iw_ucajobs_domain_Roles_nombre" property="nombre" z="VZPTYjGntBXzUBhjilfQ15UjDH4="/>
+        </table:table>
+    </page:list>
+</div>

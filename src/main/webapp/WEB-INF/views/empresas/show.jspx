@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_iw_ucajobs_domain_Empresa" create="false" object="${empresa}" path="/empresas" z="udJd4zpvUKihl63Z8qw9OM7eXQU=">
+        <field:display field="cif" id="s_es_iw_ucajobs_domain_Empresa_cif" object="${empresa}" z="wsTU2x1VIJ9/ALfssR8JhzJvXbM="/>
+        <field:display field="nombre" id="s_es_iw_ucajobs_domain_Empresa_nombre" object="${empresa}" z="nAQeVL28dxtSQyqS4OTgRWS0XQU="/>
+        <field:display field="actividad" id="s_es_iw_ucajobs_domain_Empresa_actividad" object="${empresa}" z="7scocorXm/lsiZ+mlg66NOOHrxk="/>
+        <field:display field="email" id="s_es_iw_ucajobs_domain_Empresa_email" object="${empresa}" z="Kv8CFU6WE+1ws4788PSESJ4O+hE="/>
+        <field:display field="empleados" id="s_es_iw_ucajobs_domain_Empresa_empleados" object="${empresa}" z="xIEtJSZqYDbCYXDr4glpwszIQBQ="/>
+        <field:display field="ciudades" id="s_es_iw_ucajobs_domain_Empresa_ciudades" object="${empresa}" z="u94Ox1x17AbP6aRE25/7vsyEwnY="/>
+        <field:display field="usuario" id="s_es_iw_ucajobs_domain_Empresa_usuario" object="${empresa}" z="WVOUR5dWMDdagqfDyH+YCnUYRe8="/>
+    </page:show>
+</div>
