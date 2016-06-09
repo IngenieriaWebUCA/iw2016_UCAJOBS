@@ -13,7 +13,7 @@
         <field:display field="descripcion" id="s_es_iw_ucajobs_domain_OfertaTrabajo_descripcion" object="${ofertatrabajo}" z="UA/N+p7YT9+cA0leudx43c57Ezo="/>
     </page:show>
     <security:authorize access="hasRole('Usuario Registrado')">
-        <button class="btn-success btn-block" onclick="window.location.href='/ucajobs/inscripcions/apuntar/${ofertatrabajo.id}'">
+        <button class="btn-success btn-block" onclick="window.location.href='/ucajobs/inscripcions/?form'">
             Inscribirse
         </button>
     </security:authorize>
