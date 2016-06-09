@@ -16,18 +16,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RooWebScaffold(path = "inscripcions", formBackingObject = Inscripcion.class)
 public class InscripcionController {
 	
-	@RequestMapping(value = "/apuntar/{id}", produces = "text/html")
-    public String createForm(@PathVariable("id") Long id, Model uiModel) {
-        if(UsersController.hasRole("Usuario Registrado")){
-            Users usuario = UsersController.getUsers();
-            List<OfertaTrabajo> ofertas = Arrays.asList(OfertaTrabajo.findOfertaTrabajo(id));
-            uiModel.addAttribute("inscripcion", new Inscripcion());
-            uiModel.addAttribute("ofertas", ofertas);
-            return "inscripcions/create";
-        }
-        else
-            return "redirect:/";
-    }
+@RequestMapping(method = RequestMethod.POST, produces = "text/html")
+	public String create(@Valid Inscripcion inscripcion, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+		if (bindingResult.hasErrors()) populateEditForm(uiModel, inscripcion);
+        inscripcion.setEstado_inscripcion(true);
+		inscripcion.setFecha_inscripcion(Calendar.getInstance().getTime());
+		inscripcion.setEstado(EstadoInscripcion.Recibida);
+		uiModel.asMap().clear();
+		inscripcion.persist();
+        return "inscripcions/create";
+	}
 	
 
 	
