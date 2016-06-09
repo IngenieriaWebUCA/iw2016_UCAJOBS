@@ -16,6 +16,7 @@
 			<spring:message code="application_name" var="project_name" htmlEscape="false" />
 			
 			<security:authorize access="isAuthenticated()"> 
+				<p class="navbar-brand nav navbar-right">Bienvenido: <strong>${pageContext.request.remoteUser}</strong></p>
 				<a class="navbar-brand nav navbar-right" href="ucajobs/resources/j_spring_security_logout">Logout</a>
 			</security:authorize>
 			<security:authorize access="isAnonymous()"> 
